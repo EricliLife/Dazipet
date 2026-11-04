@@ -1,9 +1,9 @@
 /* EDIT HERE: all product prices, shipping placeholders, official asset paths,
    personalities and skins are centrally managed. No build step is needed. */
 window.DAZIPET_CONFIG = {
-  currency: 'CNY',
-  locale: 'en-CN',
-  product: { name: 'Dada', brand: 'DaziPet', price: 399, extraSkinPrice: 59, maxQuantity: 99 },
+  currency: 'USD',
+  locale: 'en-US',
+  product: { name: 'Dada', brand: 'DaziPet', price: 59.99, extraSkinPrice: 8.99, maxQuantity: 99 },
   shipping: {
     fee: 0, // Simulated planning value only. Change this for your course calculation.
     origin: 'To be confirmed',
@@ -12,7 +12,7 @@ window.DAZIPET_CONFIG = {
     feeNote: 'Planning placeholder · not a confirmed shipping quote'
   },
   /* Supplied classroom concept visuals, not manufactured product photography.
-     PRD V2.0: complete set ¥399; extra skin ¥59; personality fixed after purchase. */
+     Current retail prices: complete set US$59.99; extra skin US$8.99; personality fixed after purchase. */
   skins: [
     { id: 'cloud', name: 'Cloud', material: 'Long-Pile Plush', color: '#f4e7ed', image: 'assets/products/dada-cloud.png', description: 'A cloud-shaped skin in white or soft pink-white long-pile plush.', mood: 'A softer kind of everyday.', tag: 'SOFT & DREAMY' },
     { id: 'sun', name: 'Sun', material: 'Short-Pile Plush', color: '#fff0be', image: 'assets/products/dada-sun.png', description: 'A sunshine-yellow, sun-shaped skin in short-pile plush.', mood: 'A little pocket of sunshine.', tag: 'WARM & BRIGHT' },

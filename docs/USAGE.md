@@ -8,7 +8,7 @@
 - `docs/brand-assets/README.md` 与提供的品牌、产品、场景图片。
 - `docs/requirements/original-prompt.md`。
 
-PRD 第 9.3 节及素材说明明确了完整套装 ¥399、独立外壳 ¥59 和五项标配。本版按这一具体方案实现；第 12.1 节仍保留的“价格/包装/额外外壳待定”清单视为待财务复核事项，页面仍保留 Classroom Demo，所有价格可在 config.js 改动。跨境供应地、目的市场、实际运费和交付方案未确认，继续显示占位。
+商品组成沿用 PRD 第 9.3 节的五项标配；2026-11-04 按最新要求将完整套装定价更新为 US$59.99、独立外壳更新为 US$8.99，货币为 USD。第 12.1 节仍保留的“价格/包装/额外外壳待定”清单视为待财务复核事项，页面仍保留 Classroom Demo，所有价格可在 config.js 改动。跨境供应地、目的市场、实际运费和交付方案未确认，继续显示占位。
 
 ## 文件目录
 
@@ -29,9 +29,9 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
 
 只需修改 `dist/config.js`：
 
-- `product.price: 399`：完整套装单价。
-- `product.extraSkinPrice: 59`：额外外壳单价，Cloud、Sun、Star 统一价格。
-- `shipping.fee: 0`：模拟运费。当前 **0 元仅为待定计算占位，不承诺实际免运费**。
+- `product.price: 59.99`：完整套装单价。
+- `product.extraSkinPrice: 8.99`：额外外壳单价，Cloud、Sun、Star 统一价格。
+- `shipping.fee: 0`：模拟运费。当前 **US$0 仅为待定计算占位，不承诺实际免运费**。
 - `shipping.origin`、`destination`、`delivery`、`feeNote`：跨境信息占位。
 - `skins[].image`：各款主图文件路径，统一影响首页、商品页、加购区和购物车。
 - `product.maxQuantity: 99`：每种配置的数量上限。
@@ -64,7 +64,7 @@ AI 性格与外壳独立选择：性格在购买时选定且默认固定；更�
 
 1. 首页 Shop Dada → 商品页，保持 **Complete Set**。
 2. 选择一个人格和一个外壳，数量 1，Add to bag。
-3. 在下方加购区点击 **Add skin · ¥59.00**，或切换上方 **Extra Skin** 后选款、数量、加入购物车。
+3. 在下方加购区点击 **Add skin · $8.99**，或切换上方 **Extra Skin** 后选款、数量、加入购物车。
 4. Bag：一套 + 一个额外外壳小计 **¥458**；额外外壳增加到 2 时小计 **¥517**。总计再加配置中的模拟运费，整张订单只计算一次运费。
 5. 相同类别与配置合并数量；完整套装与额外外壳不会误合并。旧版本购物车自动作为完整套装读取。
 6. 通过 + / − 修改数量，Remove 删除条目，空购物车显示返回商店入口。

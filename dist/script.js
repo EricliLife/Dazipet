@@ -81,7 +81,7 @@
   function saveCart(cart) { write('dazipet-cart',cart); updateCount(); }
   function updateCount() { const count = getCart().reduce((a,i) => a+i.quantity,0); $$('.bag-count').forEach(el => { el.textContent = count; }); $$('.bag-link').forEach(el => el.setAttribute('aria-label',`Your bag, ${count} items`)); }
   const header = $('#site-header');
-  header.innerHTML = `<a class="skip-link" href="#main-content">Skip to content</a><div class="announcement">A little companion, a bigger happiness. <span>✦</span> Classroom Demo · Concept Product · No Real Payment</div><header class="site-nav"><div class="section-wrap nav-inner"><a href="index.html" class="logo" aria-label="DaziPet home"><img src="assets/brand/logo.png" alt="DaziPet" width="296" height="195"></a><nav class="nav-links" id="main-navigation" aria-label="Main navigation"><a href="index.html" ${page==='home'?'class="active" aria-current="page"':''}>Home</a><a href="shop.html" ${page==='shop'?'class="active" aria-current="page"':''}>Shop Dada</a><a href="index.html#personalities">Personalities</a><a href="index.html#how-it-works">How it works</a></nav><div class="nav-actions"><span class="language-indicator" title="English edition">${icon('globe')} EN</span><a href="checkout.html" class="bag-link">${icon('bag')}<span class="bag-label">Bag</span><span class="bag-count">0</span></a><button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation">${icon('menu')}</button></div></div></header>`;
+  header.innerHTML = `<a class="skip-link" href="#main-content">Skip to content</a><div class="announcement">A little companion, a bigger happiness. <span>✦</span> Classroom Demo · Concept Product · No Real Payment</div><header class="site-nav"><div class="section-wrap nav-inner"><a href="index.html" class="logo" aria-label="DaziPet home"><img src="assets/brand/logo.png" alt="DaziPet" width="296" height="195"></a><nav class="nav-links" id="main-navigation" aria-label="Main navigation"><a href="index.html" ${page==='home'?'class="active" aria-current="page"':''}>Home</a><a href="shop.html" ${page==='shop'?'class="active" aria-current="page"':''}>Shop Dada</a><a href="index.html#personalities">Personalities</a><a href="index.html#how-it-works">How it works</a></nav><div class="nav-actions"><label class="language-indicator" for="site-language">${icon('globe')}<span class="sr-only">Language / 语言</span><select id="site-language" aria-label="Language / 语言"><option value="en">EN</option><option value="zh">中文</option></select></label><a href="checkout.html" class="bag-link">${icon('bag')}<span class="bag-label">Bag</span><span class="bag-count">0</span></a><button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation">${icon('menu')}</button></div></div></header>`;
   // Keep the navigation sticky without making the announcement sticky.
   header.style.display = 'contents';
   if (!$('main').id) $('main').id = 'main-content';
@@ -100,7 +100,7 @@
     target.innerHTML=[['Starting Market',`${C.shipping.market} · ${C.shipping.destination}`],['Complete Set Shipping',C.shipping.completeSetNote],['Extra Skin Shipping',C.shipping.extraSkinNote],['Future Vision',C.shipping.futureVision]].map(([a,b])=>`<div class="shipping-cell"><strong>${esc(a)}</strong><p>${esc(b)}</p></div>`).join('');
   }
   let toastTimer;
-  function toast(message,cartLink=false) { const target=$('#toast'); target.innerHTML=esc(message)+(cartLink?' <a href="checkout.html">View bag ↗</a>':''); target.classList.add('visible'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>target.classList.remove('visible'),cartLink?6500:3500); }
+  function toast(message,cartLink=false) { const target=$('#toast'); target.innerHTML=esc(message)+(cartLink?' <a href="checkout.html" aria-label="View bag with your added items">View bag ↗</a>':''); target.classList.add('visible'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>target.classList.remove('visible'),cartLink?12000:3500); }
   function initHome() {
     const tabs=$('#personality-tabs');
     function selectPersonality(id,focus=false) {
@@ -214,4 +214,5 @@
   if(page==='home')initHome();else if(page==='shop')initShop();else if(page==='checkout')initCart();else if(page==='success')initSuccess();
   if(!storageAvailable)showStorageWarning();
   window.addEventListener('storage',updateCount);
+  window.DAZIPET_I18N.start();
 })();

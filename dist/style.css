@@ -16,6 +16,14 @@
 @media(prefers-reduced-motion:reduce){.extra-skin-image img{transition:none}}
 
 /* Pricing and service terms stay visible beside the purchase controls. */
+#toast.visible{pointer-events:auto}
+#toast a{display:inline-flex;align-items:center;min-height:36px;padding:0 4px}
+.shop-view-bag{display:inline-flex;min-height:44px;align-items:center;margin-top:8px}
+.language-indicator select{border:0;background:transparent;color:inherit;cursor:pointer;font:inherit;padding:7px 2px;min-height:36px;max-width:80px}
+html[lang="zh-CN"]{--font:'Avenir Next','PingFang SC','Microsoft YaHei',sans-serif}
+html[lang="zh-CN"] .serif{font-family:'Songti SC','SimSun',serif;letter-spacing:0}
+html[lang="zh-CN"] :is(h1,h2,h3){letter-spacing:0;line-height:1.25}
+@media(max-width:650px){.language-indicator{display:flex;padding-right:10px;gap:3px}.language-indicator select{font-size:11px}.nav-actions{gap:12px}#toast{padding:10px 16px;text-wrap:pretty}}
 .shop-product-name{font-size:14px;font-weight:600;color:var(--purple);margin:18px 0 0}
 .shop-product-name+.shop-price{margin-top:7px}
 .shop-inclusions{display:flex;flex-direction:column;gap:5px;margin-top:12px;font-size:11px;line-height:1.7}

@@ -1,15 +1,22 @@
-/* EDIT HERE: all product prices, shipping placeholders, official asset paths,
+/* EDIT HERE: all product prices, shipping policies, official asset paths,
    personalities and skins are centrally managed. No build step is needed. */
 window.DAZIPET_CONFIG = {
   currency: 'USD',
   locale: 'en-US',
   product: { name: 'Dada', brand: 'DaziPet', price: 59.99, extraSkinPrice: 8.99, maxQuantity: 99 },
   shipping: {
-    fee: 0, // Simulated planning value only. Change this for your course calculation.
-    origin: 'To be confirmed',
-    destination: 'To be confirmed',
-    delivery: 'Delivery timeline, customs and taxes: to be confirmed.',
-    feeNote: 'Planning placeholder · not a confirmed shipping quote'
+    completeSetFee: 0, // Free standard shipping within mainland China.
+    standaloneSkinFee: null, // Not yet priced; never display this as free shipping.
+    market: 'Chinese Gen Z consumers',
+    destination: 'Mainland China',
+    completeSetNote: 'Free Standard Shipping within Mainland China. Extra skins ordered with a complete set ship together at no additional standard shipping charge.',
+    standaloneSkinNote: 'Standalone extra-skin shipping is not included in the displayed demo total. The delivery fee will be confirmed before commercial launch.',
+    extraSkinNote: 'Extra skins ordered with a complete set ship together. Standalone skin purchases may incur a delivery fee; free shipping is not guaranteed.',
+    futureVision: 'International markets through cross-border e-commerce.'
+  },
+  ai: {
+    connectionNote: "Talk to Dada whenever it's connected to Wi-Fi or a supported hotspot.",
+    serviceNote: "AI-powered conversations and voice reminders are part of Dada's proposed core experience. Service availability and usage terms will be finalized before commercial launch."
   },
   /* Supplied classroom concept visuals, not manufactured product photography.
      Current retail prices: complete set US$59.99; extra skin US$8.99; personality fixed after purchase. */

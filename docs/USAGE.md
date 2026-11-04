@@ -40,7 +40,7 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
 
 所有页面价格使用上述配置。已确认的订单保留当时价格快照。网站展示的完整套装清单为真实 HTML，可随业务规则修改；没有用带固定价格的整张海报代替价格逻辑。
 
-Complete Set 包含：1 个 AI 核心主机（选择一种性格）+ 1 款自选外壳 + 1 个磁吸桌面底座 + 1 根充电线 + 1 套挂包配件。
+Complete Set 包含：1 个 AI 核心主机（选择一种性格）+ 1 款自选外壳 + 1 个磁吸充电底座 + 1 根充电线 + 1 套挂包配件。
 
 Extra Skin 仅含一款替换外壳，不包含 AI 核心主机或配件；随套装加购可合并配送，单独购买不保证包邮。提供的商品概念图展示装配后的外观，页面明确说明图中的黑色核心不随独立外壳销售。
 
@@ -84,7 +84,7 @@ AI 性格与外壳独立选择：性格在购买时选定且默认固定；更�
 首页 How It Works 中保留真实 HTML 模拟界面：
 
 - Chat / Feelings / Create / View / Edit / Cancel / Complete 切换语音场景。
-- Try a reminder demo：创建 Review my notes / 16:00，直接显示在同一份 Schedule 数据中；同一示例避免重复创建。
+- Try a reminder demo：创建 Finish my assignment / 20:00，直接显示在同一份 Schedule 数据中；同一示例避免重复创建。
 - Schedule：添加、编辑、删除、打卡提醒，可设日期、时间及 None / Daily / Weekly 重复概念。
 - Settings：修改 Wake-up Name、音量、免打扰、安静时间；唤醒名称同步到语音示例。
 - Restore defaults 恢复默认偏好；Delete saved preferences 删除当前浏览器中保存的演示偏好，保留日程。

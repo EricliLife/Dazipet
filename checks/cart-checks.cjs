@@ -11,12 +11,20 @@ const helpers = source.slice(source.indexOf('  const C ='), source.indexOf('  co
 const cartFunctions = source.slice(source.indexOf('  const itemPrice ='), source.indexOf('  function addItem('));
 const calculate = source.slice(source.indexOf('  function calculate('), source.indexOf('  function initCart('));
 vm.runInContext(helpers + '\nconst read = () => globalThis.__raw;\n' + cartFunctions + calculate + '\nglobalThis.api = {getCart, calculate, itemPrice, sameItem, money};', context);
-assert.equal(context.api.money(59.99),'$59.99');
-assert.equal(context.api.money(8.99),'$8.99');
-assert.equal(context.api.money(399,'CNY'),'CN¥399.00');
+assert.equal(context.api.money(59.99),'$59.99 USD');
+assert.equal(context.api.money(8.99),'$8.99 USD');
+assert.equal(context.api.money(399,'CNY'),'CN¥399.00 CNY');
 const set = {type:'set',skin:'cloud',personality:'wood',quantity:1};
 const extra = {type:'skin',skin:'sun',personality:null,quantity:1};
 assert.equal(context.api.calculate([set]).total,59.99);
+assert.equal(context.api.calculate([{...set,quantity:2}]).total,119.98);
+for(const personality of context.window.DAZIPET_CONFIG.personalities){
+  for(const skin of context.window.DAZIPET_CONFIG.skins){
+    const result=context.api.calculate([{...set,personality:personality.id,skin:skin.id}]);
+    assert.equal(result.total,59.99,`${personality.id} / ${skin.id}`);
+    assert.equal(result.shipping,0);
+  }
+}
 assert.equal(context.api.calculate([set]).shipping,0);
 assert.equal(context.api.calculate([set]).shippingPending,false);
 assert.equal(context.api.calculate([set,extra]).subtotal,68.98);

@@ -63,7 +63,7 @@ Dazipet/
 
 | 类别 | 内容 | 模拟零售价 |
 | --- | --- | --- |
-| Dada Complete Set | 1 个 AI 核心主机 + 1 款外壳 + 磁吸桌面底座 + 充电线 + 挂包配件 | US$59.99 |
+| Dada Complete Set | 1 个 AI 核心主机 + 1 款外壳 + 磁吸充电底座 + 充电线 + 挂包配件 | US$59.99 |
 | Dada Extra Skin | Cloud、Sun 或 Star 一款外壳，不包含 AI 核心主机与配件 | US$8.99 |
 
 五种性格：**Metal — Analytical / Wood — Gentle / Water — Agile / Fire — Passionate / Earth — Steady**。
@@ -95,6 +95,8 @@ AI 对话需要 Wi-Fi 或支持的热点；基础 AI 服务为拟议核心体验
 图片替换、文件对应及完整演示步骤见 [`docs/USAGE.md`](docs/USAGE.md)。当前价通过配置统一计算，历史订单保留确认时快照。
 
 ## 验证
+
+最终轮修改记录见 [FINAL-CHANGELOG.md](docs/FINAL-CHANGELOG.md)，本轮功能结果及手机验收范围见 [FINAL-QA.md](docs/FINAL-QA.md)。所有当前商品金额明确标注 USD，套装包含一项自选性格与三款外壳中的一款。
 
 需要本机安装 Node 才运行以下开发检查；正常打开网页不需要 Node。
 

@@ -1,0 +1,2 @@
+# Keep the public home page on a single URL when serving static assets.
+/index.html / 301

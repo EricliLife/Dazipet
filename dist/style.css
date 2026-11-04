@@ -16,6 +16,17 @@
 @media(prefers-reduced-motion:reduce){.extra-skin-image img{transition:none}}
 
 /* Pricing and service terms stay visible beside the purchase controls. */
+.hero-value{font-size:15px;line-height:1.8;text-align:center;padding:22px 0 0;max-width:840px}
+.currency-note,.set-copy>.currency-note{font-size:10px;line-height:1.8;color:var(--muted);margin:10px 0 16px}
+.price-unit{font-size:12px;color:var(--muted)}
+.shop-price{flex-wrap:wrap;row-gap:8px}
+.shop-product-name{overflow-wrap:anywhere}
+.shop-main,.cart-main,.success-main{min-width:0}
+.cart-item-info,.shipping-cell,.shipping-section>div{min-width:0}
+.confirmation-item{gap:16px}
+.confirmation-item>strong{flex-shrink:0}
+@media(max-width:650px){.hero-value{display:none}.shop-price{column-gap:10px}.purchase-row #add-price{font-size:10px}.order-summary .summary-line{gap:10px}.cart-item-price{font-size:11px}.confirmation-item>strong{font-size:10px}}
+@media(max-width:370px){.purchase-row>.button{flex-wrap:wrap;justify-content:center;column-gap:8px}.purchase-row #add-price{margin-left:0}.cart-item{grid-template-columns:60px minmax(0,1fr) auto}.cart-item-price{font-size:10px}}
 #toast.visible{pointer-events:auto}
 #toast a{display:inline-flex;align-items:center;min-height:36px;padding:0 4px}
 .shop-view-bag{display:inline-flex;min-height:44px;align-items:center;margin-top:8px}

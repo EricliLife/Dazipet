@@ -110,3 +110,6 @@ node checks/cart-checks.cjs
 ## 本地数据
 
 购物车、最近一次模拟订单、示例提醒与演示偏好保存在当前浏览器。不同域名/端口的存储相互独立。本项目不含支付密钥、账号密码、Sites 访问凭据或外部分析统计。
+
+## 展示网站
+https://dazipet.liandremissu.workers.dev/
